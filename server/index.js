@@ -14,6 +14,10 @@ app.get('/APOD', (req, res) => {
       console.log(results.data);
       res.status(200).send(results.data);
     })
+    .catch((error) => {
+      console.log(error);
+      res.status(400).send(error);
+    })
 });
 
 app.listen(port, () => {
