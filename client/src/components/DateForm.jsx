@@ -13,6 +13,7 @@ class DateForm extends React.Component {
       // possibleDays: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31'],
     }
     this.onChange = this.onChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentDidMount() {
@@ -37,7 +38,7 @@ class DateForm extends React.Component {
     })
   }
 
-  onSubmit () {
+  handleSubmit () {
 
   }
 
@@ -47,27 +48,39 @@ class DateForm extends React.Component {
       <div
       id="dateFormContainer">
         <label>
-          Choose a date
+          Choose a date:
         </label>
-        <form>
-          <input
-          name="selectedYear"
-          type="number"
-          value={this.state.selectedYear}
-          onChange={this.onChange}
-          />
-          <input
-          name="selectedMonth"
-          type="number"
-          value={this.state.selectedMonth}
-          onChange={this.onChange}
-          />
-          <input
-          name="selectedDay"
-          type="number"
-          value={this.state.selectedDay}
-          onChange={this.onChange}
-          />
+        <form onSubmit={this.handleSubmit}>
+          <label>
+            Year
+            <input
+              name="selectedYear"
+              type="number"
+              value={this.state.selectedYear}
+              onChange={this.onChange}
+            />
+          </label>
+          <br />
+          <label>
+            Month
+            <input
+              name="selectedMonth"
+              type="number"
+              value={this.state.selectedMonth}
+              onChange={this.onChange}
+            />
+          </label>
+          <br />
+          <label>
+            Day
+            <input
+              name="selectedDay"
+              type="number"
+              value={this.state.selectedDay}
+              onChange={this.onChange}
+            />
+          </label>
+          <input type="submit" value="Submit" />
         </form>
       </div>
     )

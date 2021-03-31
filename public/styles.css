@@ -47,8 +47,9 @@ body {
 
 #dateFormContainer {
   grid-row-start: 4;
-  grid-row-end: 5;
+  grid-row-end: 6;
   grid-column-start: 2;
   grid-column-end: 3;
   background-color: burlywood;
+  display: flex;
 }

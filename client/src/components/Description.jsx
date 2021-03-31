@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Description(props) {
-  console.log(props)
+  // console.log(props)
   return (
     <div
     id="bottomDescription">
