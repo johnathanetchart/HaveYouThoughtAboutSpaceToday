@@ -38,8 +38,12 @@ class DateForm extends React.Component {
     })
   }
 
-  handleSubmit () {
-
+  handleSubmit (e) {
+    // console.log(this.props)
+    const { selectedYear, selectedMonth, selectedDay } = this.state;
+    let newDate = selectedYear + '-' + selectedMonth + '-' + selectedDay;
+    this.props.handleDateSubmit(newDate);
+    e.preventDefault();
   }
 
   render () {

@@ -5,7 +5,7 @@ function Description(props) {
   return (
     <div
     id="bottomDescription">
-      {props.explanation}
+      <p>{props.explanation}</p>
     </div>
   )
 }

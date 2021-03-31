@@ -5,7 +5,7 @@ function Header() {
   return (
     <div
     id="header">
-      Have you thought about space today?
+      <h1>Have you thought about space today?</h1>
     </div>
   )
 }

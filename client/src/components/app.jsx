@@ -22,11 +22,16 @@ class App extends React.Component {
         url: 'https://apod.nasa.gov/apod/image/2103/sprites_beletsky_960.jpg',
       }
     }
+    this.handleDateSubmit = this.handleDateSubmit.bind(this);
   }
 
   componentDidMount () {
     //fetch picture of the day and set it to state
     // this.getPictureOfDay();
+  }
+
+  handleDateSubmit (date) {
+    console.log(date)
   }
 
   getPictureOfDay () {
@@ -49,7 +54,9 @@ class App extends React.Component {
           title={this.state.pictureOfDay.title}
           date={this.state.pictureOfDay.date}
         />
-        <DateForm />
+        <DateForm
+          handleDateSubmit={this.handleDateSubmit}
+        />
         <Photo
           photoUrl={this.state.pictureOfDay.url}
         />
