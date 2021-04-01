@@ -8,7 +8,7 @@ class NeoCard extends React.Component {
   }
 
   render() {
-    const { neo } = this.props;
+    const { neo, handleAddWatch } = this.props;
 
     let danger = 'safe';
     if (neo.is_potentially_hazardous_asteroid) {
@@ -25,6 +25,10 @@ class NeoCard extends React.Component {
         max:
         {String(neo.estimated_diameter.meters.estimated_diameter_max).split('.')[0]}
       </p>
+    }
+    let addButton = null;
+    if (handleAddWatch) {
+      <button onClick={handleAddWatch}>AddToWatchList</button>
     }
     return (
       <div

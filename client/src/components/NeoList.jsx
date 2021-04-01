@@ -9,7 +9,7 @@ class NeoList extends React.Component {
   }
 
   render () {
-    const { numberOfNeos, numberOfHazards, nearEarthObjects } = this.props;
+    const { numberOfNeos, numberOfHazards, nearEarthObjects, handleAddWatch } = this.props;
     if (nearEarthObjects.length > 0) {
       return (
         <div
@@ -19,7 +19,10 @@ class NeoList extends React.Component {
           {
             nearEarthObjects.map((neo) => {
               return (
-                <NeoCard neo={neo} />
+                <NeoCard
+                  neo={neo}
+                  handleAddWatch={handleAddWatch}
+                />
               )
             })
           }
