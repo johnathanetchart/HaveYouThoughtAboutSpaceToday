@@ -11,7 +11,8 @@ function Header() {
         { backgroundImage: `url(http://i.imgur.com/NSOcrhj.png)`}
         }
       />
-      <h1>Have you thought about space today?</h1>
+      <h2>Have you thought about space today?</h2>
+      <h4>Well maybe you should.</h4>
     </div>
   )
 }

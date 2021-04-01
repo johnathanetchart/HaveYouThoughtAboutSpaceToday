@@ -5,7 +5,7 @@ function TopDescription(props) {
   return (
     <div
     id="topDescription">
-      <h2>{props.title} {props.date}</h2>
+      <h2>Happy Thoughts | {props.title} {props.date}</h2>
     </div>
   )
 }

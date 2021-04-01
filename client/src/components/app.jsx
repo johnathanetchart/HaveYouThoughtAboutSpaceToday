@@ -84,14 +84,12 @@ class App extends React.Component {
   }
 
   handleAddWatch (neo) {
-    console.log(neo)
+    // console.log(neo)
     const { neoWatch } = this.state;
     let newNeoWatch = neoWatch.slice(0);
     newNeoWatch.push(neo);
     this.setState({
       neoWatch: newNeoWatch
-    }, () => {
-      console.log(this.state.neoWatch)
     });
   }
 
