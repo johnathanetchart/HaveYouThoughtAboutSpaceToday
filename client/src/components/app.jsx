@@ -99,7 +99,7 @@ class App extends React.Component {
           nearEarthObjects={nearEarthObjects}
         />
         <Photo
-          photoUrl={pictureOfDay.hdurl}
+          photoUrl={pictureOfDay.url}
         />
         <Description
           explanation={pictureOfDay.explanation}
