@@ -30,7 +30,7 @@ class NeoCard extends React.Component {
       <div
         className="neoCard"
       >
-        NEO Name: {neo.name}
+        NEO:<a href={neo.nasa_jpl_url}>{neo.name}</a>
         <br />
         {danger}
       </div>

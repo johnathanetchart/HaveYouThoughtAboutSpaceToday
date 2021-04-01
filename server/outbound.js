@@ -12,11 +12,19 @@ const fetchAPOD = (query) => {
   if(query.date) {
     options.params.date = query.date;
   }
-  // console.log(options)
   return axios.get('https://api.nasa.gov/planetary/apod', options)
 }
 
 const fetchNEO = (query) => {
+  //set default to today
+  if (query.date === undefined) {
+    let today = new Date();
+    let yyyy = String(today.getFullYear());
+    let mm = String(today.getMonth() + 1).padStart(2, '0');
+    let dd = String(today.getDate()).padStart(2, '0');
+    query.date = yyyy + '-' + mm + '-' + dd;
+  }
+  // console.log(query.date)
   let options = {
     params: {
       api_key: nasaKey,
