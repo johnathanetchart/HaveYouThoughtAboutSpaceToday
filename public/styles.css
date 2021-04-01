@@ -75,9 +75,10 @@ body {
   grid-row-start: 8;
   grid-row-end: 9;
   grid-column-start: 1;
-  grid-column-end: 3;
+  grid-column-end: 2;
   padding: 20px;
   background-color: grey;
+  display: flex;
 }
 
 #logo {

@@ -28,7 +28,7 @@ class NeoCard extends React.Component {
     }
     let addButton = null;
     if (handleAddWatch) {
-      <button onClick={handleAddWatch}>AddToWatchList</button>
+      addButton = <button onClick={() => handleAddWatch(neo)}>AddToWatchList</button>
     }
     return (
       <div
@@ -36,6 +36,7 @@ class NeoCard extends React.Component {
       >
         NEO:<a href={neo.nasa_jpl_url}>{neo.name}</a>
         <br />
+        {addButton}
         {danger}
       </div>
     )
