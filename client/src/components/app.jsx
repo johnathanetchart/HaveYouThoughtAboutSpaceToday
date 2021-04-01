@@ -6,6 +6,7 @@ import TopDescription from './TopDescription';
 import Description from './Description';
 import DateForm from './DateForm';
 import NeoList from './NeoList';
+import WatchList from './WatchList';
 
 class App extends React.Component {
   constructor(props) {
@@ -16,8 +17,10 @@ class App extends React.Component {
       numberOfNeos: 0,
       numberOfHazards: 0,
       nearEarthObjects: [],
+      neoWatch: [],
     }
     this.handleDateSubmit = this.handleDateSubmit.bind(this);
+    this.handleAddWatch = this.handleAddWatch.bind(this);
   }
 
   componentDidMount () {
@@ -80,8 +83,12 @@ class App extends React.Component {
     }
   }
 
+  handleAddWatch (neo) {
+    console.log(neo)
+  }
+
   render () {
-    const { pictureOfDay, numberOfNeos, numberOfHazards, nearEarthObjects } = this.state;
+    const { pictureOfDay, numberOfNeos, numberOfHazards, nearEarthObjects, neoWatch } = this.state;
     return(
       <div
       id="mainContent">
@@ -97,12 +104,16 @@ class App extends React.Component {
           numberOfNeos={numberOfNeos}
           numberOfHazards={numberOfHazards}
           nearEarthObjects={nearEarthObjects}
+          handleAddWatch={this.handleAddWatch}
         />
         <Photo
           photoUrl={pictureOfDay.url}
         />
         <Description
           explanation={pictureOfDay.explanation}
+        />
+        <WatchList
+          neoWatch={neoWatch}
         />
       </div>
     )
